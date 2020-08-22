@@ -1,0 +1,6 @@
+<?php
+$parameters = [
+    'pdo_host' => 'mysql:host=fakedata;dbname=pa-database',
+    'pdo_username' => 'username',
+    'pdo_password' => 'yourpassword',
+];
