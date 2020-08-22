@@ -1,0 +1,11 @@
+<?php ob_start() ?>
+
+    <h1>Bienvenue dans la partie administration</h1>
+
+    <p>Veuiller choisir la page a modifier puis sélectionnez gestion de catégorie ou gestion de photos</p>
+    <p>la gestion de catégorie permet d'ajouter, modifier, supprimer le titre, la photo de couverture ou la
+        catégorie elle même. Supprimer une catégorie efface la totalité des photos contenu dans celle-ci.</p>
+    <p>la gestion de photos permet d'ajouter, modifier, supprimer le titre, la position des photos et de leurs
+        choisir une catégorie </p>
+
+<?php $content = ob_get_clean(); ?>

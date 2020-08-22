@@ -1,0 +1,18 @@
+<?php ob_start() ?>
+
+    <section>
+
+        <ul class="carousel">
+            <?php foreach ($carousselPhotos as $carousselPhoto): ?>
+
+                <li>
+                    <img class="item" src="assets/images/selectedWork/<?= $carousselPhoto["photo"] ?>"
+                         alt="<?= $carousselPhoto["titre"] ?>"/>
+                </li>
+
+            <?php endforeach; ?>
+        </ul>
+
+    </section>
+
+<?php $content = ob_get_clean(); ?>

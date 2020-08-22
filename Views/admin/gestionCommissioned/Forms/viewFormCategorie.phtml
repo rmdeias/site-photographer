@@ -1,0 +1,31 @@
+<?php ob_start() ?>
+
+    <form action="Models/commissioned/gestionCategories/insertUpdate.php" method="Post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Commissioned: Gestion Catégorie</legend>
+            <ul>
+                <li>
+                    <label>Titre catégorie:</label>
+                    <input type="text" id="categorie"
+                           name="categorie" <?php if (isset($listeCategorie)): ?> value="<?= $listeCategorie["categorie"] ?>"<?php endif; ?>
+                           required>
+                </li>
+
+                <li>
+                    <label>Photo:</label>
+                    <input type="file" id="photoCouv"
+                           name="photoCouv" <?php if (!isset($listeCategorie["categorie"])): ?> required <?php endif; ?>>
+                </li>
+
+                <li>
+                    <?php if (isset($listeCategorie)): ?>
+                        <input type="hidden" name="id" id="id" value="<?= $listeCategorie["id"] ?>">
+                    <?php endif; ?>
+                </li>
+
+            </ul>
+            <button type="submit">Enregistrer</button>
+        </fieldset>
+    </form>
+
+<?php $content = ob_get_clean(); ?>

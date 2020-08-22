@@ -1,0 +1,50 @@
+<?php ob_start() ?>
+
+    <form id="Form" action="Models/fashion/gestionPhotos/insertUpdate.php" method="Post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Fashion: Gestion Photos</legend>
+
+            <ul>
+                <li>
+                    <select name="categories" id="categories" required>
+
+                        <option value="">Selectionner une catégorie</option>
+                        <?php foreach ($listeCategories as $nomCategorie): ?>
+                            <option value="<?= $nomCategorie["id"] ?>" <?php if (isset($listePhoto) && $listePhoto["id_Categorie"] == $nomCategorie["id"]): ?> selected <?php endif; ?>><?= $nomCategorie["categorie"] ?></option>
+                        <?php endforeach; ?>
+
+                    </select>
+                </li>
+
+                <li>
+                    <label>Position:</label>
+                    <input type="number" min="1" max="99" name="classement" id="classement"
+                           placeholder="(facultatif) Ordre d'apparition des photo"
+                           <?php if (isset($listePhoto)): ?>value="<?= $listePhoto["classement"] ?>" <?php endif; ?>>
+                </li>
+
+                <li>
+                    <label>Titre:</label>
+                    <input type="text" name="titre" id="titre"
+                           placeholder="(facultatif) titre de la photo" <?php if (isset($listePhoto)): ?> value="<?= $listePhoto["titre"] ?>"<?php endif; ?>>
+                </li>
+
+                <li <?php if (isset($listePhoto["id"])): ?> class="hide" <?php endif; ?>>
+
+                    <label>Photo:</label>
+                    <input type="file" name="photo"
+                           id="photo" <?php if (!isset($listePhoto["id"])): ?> required  <?php endif; ?>>
+                </li>
+
+                <li>
+                    <?php if (isset($listePhoto)): ?>
+                        <input type="hidden" name="id" id="id" value="<?= $listePhoto["id"] ?>">
+                    <?php endif; ?>
+                </li>
+            </ul>
+
+            <button type="submit">Enregistrer</button>
+        </fieldset>
+    </form>
+
+<?php $content = ob_get_clean(); ?>

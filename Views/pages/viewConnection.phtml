@@ -1,0 +1,26 @@
+<?php ob_start() ?>
+
+    <form action="Models/adminConnection/adminConnection.php" method="POST">
+        <fieldset>
+            <legend>Connection</legend>
+
+            <ul>
+
+                <li>
+                    <label>Mail: </label>
+                    <input type="email" name="Email" required>
+                </li>
+
+                <li>
+                    <label>Mot de passe: </label>
+                    <input type="password" name="Password" required>
+                </li>
+
+            </ul>
+
+            <button type="submit">Connection</button>
+
+        </fieldset>
+    </form>
+
+<?php $content = ob_get_clean(); ?>

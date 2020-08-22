@@ -1,0 +1,489 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+@font-face {
+    src: url("../fonts/ClearSans-Thin.ttf");
+    font-family: "Clear";
+}
+
+body {
+    font-family: "Clear", "sans-serif";
+    text-align: center;
+    margin: auto;
+}
+
+header nav a {
+    text-transform: uppercase;
+    flex-basis: 20%;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h1, h2 {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/********************************
+* HEADER PAGE CLIENT
+*********************************/
+
+.header_pages div div img {
+    height: 48px;
+}
+
+.header_pages nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.header_pages nav a:nth-child(5) {
+    display: none;
+}
+
+/********************************
+* Carousel
+*********************************/
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 90px;
+}
+
+.item {
+    height: 387px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+/*****************************************
+* COMMISSIONED/STILL LIFE/FASHION/PERSONAL
+*****************************************/
+.hide {
+    display: none;
+}
+
+.menu-categorie article {
+    margin-bottom: 30px;
+}
+
+.menu-categorie article a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.menu-categorie article a img {
+    width: 230px;
+    margin-bottom: 15px;
+}
+
+.scale-article {
+    transition: all 0.5s ease 0s;
+    -webkit-transform: scale(1.03); /*/ Safari et Chrome */
+    -moz-transform: scale(1.03); /*Firefox */
+    -ms-transform: scale(1.03); /* Internet Explorer 9 */
+    -o-transform: scale(1.03); /*Opera */
+    transform: scale(1.03);
+}
+
+/*****************************************
+* CONTACT
+*****************************************/
+.contact nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact nav a {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.contact nav i {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.contact {
+    display: none;
+}
+
+.error404 {
+    width: 300px;
+}
+
+/********************************
+* FOOTER PAGE CLIENT
+*********************************/
+.footer_pages, .footer_pages a {
+    color: rgb(255, 255, 255);
+}
+
+.footer_pages {
+    background-color: black;
+    padding: 15px;
+}
+
+.footer_pages p:first-of-type {
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer_pages p:nth-child(2) {
+    font-size: 10px;
+}
+
+.footer_pages a {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.footer_pages i {
+    margin: 10px;
+    font-size: 20px;
+}
+
+/********************************
+* ADMIN
+*********************************/
+/********************************
+* Gestion
+*********************************/
+.header_admin a:hover, .login_deconnection p, .main_admin a:hover, .update, .delete {
+    color: rgb(255, 255, 255);
+}
+
+.header_admin .gestion, .ajout, .update {
+    background-color: rgb(173, 216, 230);
+}
+
+.header_admin .gestion, .login_deconnection p {
+    margin: 0;
+}
+
+.accueil {
+    background-color: rgb(251, 170, 78);
+}
+
+.login_deconnection {
+    text-align: right;
+    padding: 15px;
+}
+
+.login_deconnection a {
+    font-size: 12px;
+    color: rgb(220, 20, 60);
+}
+
+.header_admin nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_admin nav a {
+    margin: 10px;
+}
+
+.header_admin .gestion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.main_admin .container {
+    padding: 10px;
+}
+
+.miniPhoto {
+    width: 150px;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.delete {
+    background-color: rgb(255, 0, 0);
+}
+
+/***************** TABLES ***************/
+table {
+    display: none;
+}
+
+th {
+    background-color: rgb(171, 169, 169);
+    color: white;
+}
+
+tr:nth-of-type(even) td, tr:nth-of-type(odd) td {
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    height: 270px;
+}
+
+tr:nth-of-type(even) td {
+    background-color: rgba(255, 78, 78, 0.4);
+}
+
+tr:nth-of-type(odd) td {
+    background-color: rgba(255, 78, 78, 0.2);
+}
+
+/*********** FORMS ***********/
+form {
+    margin-bottom: 110px;
+    margin-top: 110px;
+    max-width: 1200px;
+}
+
+form legend {
+    padding: 10px;
+    text-align: left;
+}
+
+form li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 15px;
+}
+
+form input {
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+form input, form select {
+    font-size: 15px;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+/*********** FOOTER ADMIN ***********/
+.footer_admin {
+    text-align: left
+}
+
+.footer_admin a {
+    margin: 15px;
+
+}
+
+/********************************
+* RESPONSIVE
+*********************************/
+
+@media screen and (min-width: 360px) {
+    .header_pages div div img {
+        height: 70px;
+    }
+
+    .item {
+        height: 438px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .header_pages div div img {
+        height: 70px;
+    }
+
+    .item {
+        height: 456px;
+    }
+}
+
+@media screen and (min-width: 411px) {
+    header nav a {
+        font-size: 15px;
+    }
+
+    .header_pages div div img {
+        height: 90px;
+    }
+
+    .item {
+        height: 502px;
+    }
+
+    /********* COMMISSIONED/STILL LIFE/FASHION/PERSONAL ***********/
+    .menu-categorie article a img {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header nav a {
+        font-size: 15px;
+    }
+
+    .header_pages div div img {
+        height: 110px;
+    }
+
+    .header_pages nav a:nth-child(5) {
+        display: block;
+    }
+
+    .item {
+        height: 600px;
+    }
+
+    .footer_pages {
+        display: none;
+    }
+
+    /********* COMMISSIONED/STILL LIFE/FASHION/PERSONAL ***********/
+    .menu-categorie .container-categorie {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+    }
+
+    .menu-categorie article {
+        margin-bottom: 50px;
+        flex-basis: 50%;
+    }
+
+    .menu-categorie article a img, .contact img {
+        width: 300px;
+    }
+
+    .container-categorie {
+        padding: 40px;
+    }
+
+    .contact {
+        display: block;
+    }
+
+    /********* ADMIN ***********/
+    .header_admin div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_admin nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    table {
+        display: block;
+    }
+
+    .messageTable, td.titre, th.titre {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header_pages .container {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_pages nav {
+        flex-basis: 50%;
+        margin-top: 40px;
+    }
+
+    .header_pages div div img {
+        height: 75px;
+    }
+
+    /********* COMMISSIONED/STILL LIFE/FASHION/PERSONAL ***********/
+    .container section {
+        margin: 25px;
+    }
+
+    .item {
+        height: 650px;
+    }
+
+    .menu-categorie article a img {
+        width: 280px;
+    }
+
+    .menu-categorie article {
+        flex-basis: 33%;
+    }
+
+    /********** ADMIN ********/
+    form {
+        margin: auto;
+    }
+
+    form input {
+        width: 300px;
+    }
+
+    ::placeholder {
+        color: rgb(128, 128, 128);
+    }
+
+    th.titre, td.titre {
+        display: block;
+    }
+
+    td.titre p {
+        margin-top: 105px;
+    }
+}
+
+@media screen and (min-width: 1640px) {
+    /********* COMMISSIONED/STILL LIFE/FASHION/PERSONAL ***********/
+    .menu-categorie article a img {
+        width: 350px;
+    }
+
+    .menu-categorie article {
+        flex-basis: 25%;
+    }
+
+}
+
+@media screen and (min-height: 740px) {
+    footer {
+        bottom: -10;
+        position: absolute;
+        width: 100%;
+    }
+}

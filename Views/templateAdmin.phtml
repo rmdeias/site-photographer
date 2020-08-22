@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><?= $title ?></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+          integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<header class="header_admin">
+    <div class="container">
+        <div class="accueil">
+
+
+            <div class="login_deconnection">
+
+                <p>Bonjour Clémentine</p>
+                <a href="Models/adminConnection/adminDeconnection.php">Déconnection</a>
+            </div>
+
+            <nav class="nav_admin">
+
+                <a href="select" title="Selected Work">Selected Work</a>
+                <a href="comm" title="Commissioned">Commissioned</a>
+                <a href="still" title="Still Life">Still Life</a>
+                <a href="fash" title="Fashion">Fashion</a>
+                <a href="perso" title="Personal">Personal</a>
+            </nav>
+        </div>
+
+        <div class="gestion">
+            <?php if (isset($gestCat)): ?>
+                <a href="<?= $gestCat ?>" title="Gestion Catégorie">Gestion Catégorie</a>
+            <?php endif; ?>
+
+            <?php if (isset($gestPhotos)): ?>
+                <a href="<?= $gestPhotos ?>" title="Gestion Photos">Gestion Photos</a>
+            <?php endif; ?>
+        </div>
+    </div>
+</header>
+
+<main class="main_admin">
+    <div class="container">
+
+        <?= $content ?>
+
+    </div>
+</main>
+<footer class="footer_admin">
+    <?php if ($page !== "gestion" && $page !== "select" && $page !== "comm" && $page !== "fash" && $page !== "perso" && $page !== "still"): ?>
+        <a href="gestion">&larr; Retour a l'accueil</a>
+    <?php endif; ?>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="assets/js/mainAdmin.js"></script>
+<script src="<?= $js ?>"></script>
+
+</body>
+
+</html>

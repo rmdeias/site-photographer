@@ -1,0 +1,42 @@
+<?php ob_start() ?>
+
+<section id="carousel-categorie">
+    <?php if (isset($_GET["id"])): ?>
+
+        <ul class="carousel">
+
+            <?php foreach ($carousselPhotos as $carousselPhoto): ?>
+
+                <li>
+                    <img class="item"
+                         src="assets/images/commissioned/<?= $carousselPhoto["categorie"]."/".$carousselPhoto["photo"] ?>"
+                         alt="<?= $carousselPhoto["titre"] ?>"/>
+                </li>
+
+            <?php endforeach; ?>
+
+        </ul>
+
+    <?php endif; ?>
+</section>
+
+<section class="menu-categorie">
+
+    <div class="container-categorie">
+        <?php foreach ($categories as $categorie): ?>
+            <?php if (!isset($_GET["id"]) || ($_GET["id"] != $categorie["id"])): ?>
+                <article class="scale-article">
+
+                    <a href="commissioned&id=<?= $categorie["id"] ?>" title="Série: <?= $categorie["categorie"] ?>"><img
+                                class="selection-categorie"
+                                src="assets/images/commissioned/<?= $categorie["categorie"]."/".$categorie["photoCouv"] ?>"
+                                alt="Série: <?= $categorie["categorie"] ?>"><?= $categorie["categorie"] ?></a>
+
+                </article>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+
+</section>
+
+<?php $content = ob_get_clean(); ?>

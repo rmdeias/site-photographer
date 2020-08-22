@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Clémentine Passet french photographer based Paris Fashion, Food, Still Life."/>
+    <title><?= $title ?></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+          integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="header_pages">
+    <div class="container">
+        <div><a href="home" title="HOME"><img class="lien" src="assets/images/PassetClementine.jpeg"
+                                              alt="Logo Clémentine Passet Paris Photographer"></a></div>
+        <nav>
+            <a class="lien" href="commissioned" title="Commissioned">commissioned</a>
+            <a class="lien" href="StillLife" title="Still Life">still life</a>
+            <a class="lien" href="fashion" title="Fashion">fashion</a>
+            <a class="lien" href="personal" title="Personal">Personal</a>
+            <a class="lien" href="contact" title="Contact">contact</a>
+        </nav>
+    </div>
+
+</header>
+
+<main>
+    <div class="container">
+
+        <?= $content ?>
+
+    </div>
+</main>
+<?php if ($page !== "contact"): ?>
+    <footer class="footer_pages">
+        <p>Clémentine Passet</p>
+        <p>Paris based photographer</p>
+        <a href="https://www.instagram.com/clementinepasset/?hl=fr"><i class="fab fa-instagram"></i>instagram</a>
+        <a href="mailto:clementine.passet@gmail.com"><i class="far fa-envelope"></i>clementine.passet@gmail.com</a>
+        <a href="tel:+33781532626"><i class="fas fa-phone-alt"></i> +33781532626</a>
+    </footer>
+<?php endif; ?>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

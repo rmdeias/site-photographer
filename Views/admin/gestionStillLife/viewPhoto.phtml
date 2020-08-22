@@ -1,0 +1,48 @@
+<?php ob_start() ?>
+
+    <section>
+        <a class="button ajout" title="Ajout de photo" href="stillPhotoForm">Ajouter des photos</a>
+
+        <p class="messageTable">Veuillez vous connecter sur un écran de taille adapté(tablette ou ordinateur) pour
+            visualiser correctement cette page.</p>
+
+        <?php if (!empty($photoStill)): ?>
+            <table>
+                <thead>
+                <tr>
+                    <th class="titre">Titre</th>
+                    <th>Photo</th>
+                    <th>Categorie</th>
+                    <th>Position</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <?php foreach ($photoStill as $photo): ?>
+                    <tr>
+                        <td class="titre"><p><?= $photo["titre"] ?></p></td>
+
+                        <td><img class="miniPhoto"
+                                 src="assets/images/stillLife/<?= $photo["categorie"]."/".$photo["photo"] ?>"></td>
+
+                        <td><?= $photo["categorie"] ?></td>
+
+                        <td><?php if ($photo["classement"] != 99): ?><?= $photo["classement"] ?><?php endif; ?></td>
+
+                        <td><a href="stillPhotoForm&id=<?= $photo["id"] ?>" class="button update"><i
+                                        class="fas fa-feather-alt"></i></a></td>
+
+                        <td><a href="stillPhotoDelete&id=<?= $photo["id"] ?>" class="button delete"><i
+                                        class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                <?php endforeach ?>
+
+                </tbody>
+            </table>
+        <?php endif; ?>
+    </section>
+
+<?php $content = ob_get_clean(); ?>
